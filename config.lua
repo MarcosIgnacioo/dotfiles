@@ -281,7 +281,6 @@ end
 vim.api.nvim_set_keymap('n', '<Leader>hm', [[:lua Err_nil()<CR>]], { noremap = true, silent = true })
 lvim.format_on_save.enabled = true
 local cmp = require 'cmp'
-
 cmp.setup({
     mapping =
     {
