@@ -286,7 +286,7 @@ cmp.setup({
     mapping =
     {
         ['j'] = cmp.mapping.select_next_item(),
-        ['k'] = cmp.mapping.select_prev_item(),
+        [';'] = cmp.mapping.select_prev_item(),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
         ['<Tab>'] = cmp.mapping.confirm({
