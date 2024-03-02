@@ -280,3 +280,18 @@ end
 -- Asigna la función a una combinación de teclas (puedes cambiarlo según tus preferencias)
 vim.api.nvim_set_keymap('n', '<Leader>hm', [[:lua Err_nil()<CR>]], { noremap = true, silent = true })
 lvim.format_on_save.enabled = true
+local cmp = require 'cmp'
+
+cmp.setup({
+    mapping =
+    {
+        ['j'] = cmp.mapping.select_next_item(),
+        ['k'] = cmp.mapping.select_prev_item(),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.abort(),
+        ['<Tab>'] = cmp.mapping.confirm({
+            select = true,
+            behavior = cmp.ConfirmBehavior.Replace,
+        }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    }
+})
